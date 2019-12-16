@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Tbb_News::news" title="News" module="Tbb_News" sortOrder="700"
+             resource="Tbb_News::news" parent="Magento_Backend::content" />
+
+        <add id="Tbb_News::tbb_news" title="All News" module="Tbb_News" sortOrder="10"
+             resource="Tbb_News::tbb_news" parent="Tbb_News::news" action="news/index" />
+    </menu>
+</config>

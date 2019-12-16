@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="blog_post_listing_data_source" xsi:type="string">Tbb\News\Model\ResourceModel\News\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Tbb\News\Model\ResourceModel\News\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">tbb_news_entity</argument>
+            <argument name="eventPrefix" xsi:type="string">tbb_news_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">news_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Tbb\News\Model\ResourceModel\News</argument>
+        </arguments>
+    </type>
+
+</config>
